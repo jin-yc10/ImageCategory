@@ -3,3 +3,12 @@
 Homestead.yaml
 Homestead.json
 .env
+.idea/.name
+.idea/blade.xml
+.idea/ImageCategory.iml
+.idea/laravel-plugin.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/webResources.xml
+.idea/workspace.xml
