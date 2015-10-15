@@ -32,17 +32,18 @@ Route::get('/dashboard', function (Request $request) {
     if(Auth::user()) {
         return view('app.dashboard')->with('title', 'Dashboard');
     } else {
+        $request->session()->flash('message', 'please login first');
         return redirect("auth/login");
     }
 });
 
 Route::group(['prefix' => 'auth'], function() {
-// Authentication routes...
+    // Authentication routes...
     Route::get('login', 'Auth\AuthController@getLogin');
     Route::post('login', 'Auth\AuthController@postLogin');
     Route::get('logout', 'Auth\AuthController@getLogout');
 
-// Registration routes...
+    // Registration routes...
     Route::get('register', 'Auth\AuthController@getRegister');
     Route::post('register', 'Auth\AuthController@postRegister');
 });

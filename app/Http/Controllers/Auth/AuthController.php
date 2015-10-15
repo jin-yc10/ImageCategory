@@ -70,6 +70,7 @@ class AuthController extends Controller
 
     public function getLogin() {
         var_dump('getLogin');
+        \DebugBar::error('Error!');
         return view('auth.login')->with('title', 'Login');
     }
 

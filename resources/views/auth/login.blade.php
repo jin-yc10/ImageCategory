@@ -5,6 +5,9 @@
 <div class="container">
     <form method="POST" action="/auth/login">
         {!! csrf_field() !!}
+        @if(Session::has('message'))
+            <p> {{ Session::get('message') }} </p>
+        @endif
         <div>
             Email
             <input type="email" name="email" value="{{ old('email') }}">
