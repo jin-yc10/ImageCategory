@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,9 @@ Route::group(['prefix' => 'auth'], function() {
     Route::get('register', 'Auth\AuthController@getRegister');
     Route::post('register', 'Auth\AuthController@postRegister');
 });
+
+Route::resource('user', 'UserController');
+Route::resource('dataset', 'ImageDataSetController');
 
 Route::get('/test', function (Request $request) {
     return view('app.test')->with('title', 'Test');

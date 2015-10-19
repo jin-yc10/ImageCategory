@@ -10,6 +10,8 @@
         <button type="submit">Logout</button>
     </form>
     <div>
-        <a href="/dataset">Datasets!</a>
+        @foreach($datasets as $d)
+            <p>{{$d->id}}</p><a href="/dataset/{{$d->id}}">{{$d->name}}</a>
+        @endforeach
     </div>
 @endsection

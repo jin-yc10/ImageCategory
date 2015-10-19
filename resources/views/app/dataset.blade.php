@@ -10,6 +10,11 @@
         <button type="submit">Logout</button>
     </form>
     <div>
-        <a href="/dataset">Datasets!</a>
+        <p>{{$dataset->id}}</p>
+        <p>{{$dataset->name}}</p>
+        <hr>
+        @foreach($categories as $c)
+            <p>{{$c->id}}</p><p>{{$c->name}}</p>
+        @endforeach
     </div>
 @endsection
