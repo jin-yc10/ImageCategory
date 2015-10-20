@@ -13,6 +13,6 @@ class ImageCategory extends Model
         return $this->belongsTo('App\ImageDataSet', "image_dataset_id", "id");
     }
     public function ImageItems() {
-        return $this->hasMany('App\ImageItem', 'image_id', 'id');
+        return $this->hasMany('App\ImageItem', 'image_category_id', 'id');
     }
 }

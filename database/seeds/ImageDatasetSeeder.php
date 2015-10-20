@@ -26,6 +26,14 @@ class ImageDatasetSeeder extends Seeder
                 $cat->fill(array('name'=>str_random(10)));
                 $cat->ImageDataSet()->associate($db);
                 $cat->save();
+                for($k = 0; $k < 10; $k++) {
+                    $img = new \App\ImageItem();
+                    $img->fill(['name'=>str_random(10),
+                        'url'=>str_random(10)
+                    ]);
+                    $img->category()->associate($cat);
+                    $img->save();
+                }
             }
         }
     }

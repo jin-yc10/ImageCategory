@@ -51,6 +51,7 @@ Route::group(['prefix' => 'auth'], function() {
 
 Route::resource('user', 'UserController');
 Route::resource('dataset', 'ImageDataSetController');
+Route::resource('dataset.category', 'ImageCategoryController');
 
 Route::get('/test', function (Request $request) {
     return view('app.test')->with('title', 'Test');

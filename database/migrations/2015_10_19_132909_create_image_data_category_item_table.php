@@ -30,7 +30,7 @@ class CreateImageDataCategoryItemTable extends Migration
         });
 
         // Create table for storing permissions
-        Schema::create('image_objects', function (Blueprint $table) {
+        Schema::create('image_items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('url')->nullable();

@@ -10,11 +10,11 @@
         <button type="submit">Logout</button>
     </form>
     <div>
-        <p>{{$dataset->id}}</p>
-        <p>{{$dataset->name}}</p>
+        <h1>Dataset  {{$db->name}}</h1>
+        <h2>Category {{$cat->name}}</h2>
         <hr>
-        @foreach($categories as $c)
-            <p>{{$c->id}}</p><p><a href="/dataset/{{$dataset->id}}/category/{{$c->id}}">{{$c->name}}</a></p>
+        @foreach($images as $image)
+            <p>{{$image->name}}</p><img src="{{$image->url}}" alt="{{$image->url}}" />
         @endforeach
     </div>
 @endsection
